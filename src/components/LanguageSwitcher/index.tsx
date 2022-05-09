@@ -45,7 +45,7 @@ export function LanguageSwitcher() {
               fontWeight: i18n.language === languageOption.value ? 'bold' : 'normal',
               textDecoration: i18n.language === languageOption.value ? 'underline' : 'none',
             }}
-            >{languageOption.name}</span>
+            >{languageOption.name}</span> 
           </button>
         ))}
     </div>
