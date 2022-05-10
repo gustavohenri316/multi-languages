@@ -79,7 +79,7 @@
   $ npm install 
 ```
  <p> Abra a pasta no Visual Studio Code  </p>
- 
+
 ```bash
   $ code .
 ```
@@ -165,4 +165,91 @@ i18n
 
 
 export default  i18n; 
+```
+ Dentro do arquivo raiz do seu projeto importe o componente *i18n* que acabamos de criar 
+
+<img src="https://i.ibb.co/hLspvyH/raiz.png"/>
+
+Depois disso você podera fazer as traduções usando a hook *useTranslation()* importanto {t} ou {i18n}
+
+```tsx
+import { useTranslation } from 'react-i18next'
+
+function App() {
+  const {t} = useTranslation() 
+  return (
+    <div style={{color: 'azure'}}>
+       <h1>{t("title.welcomeToTheBest")}</h1>
+       <h2>{t("subtitle.whereYouCan")}</h2>
+       <button>{t("buttons.buttonOne")}</button>
+    </div>
+  )
+}
+export default App
+```
+Você pode utilizar o t() para fazer as traduções do seu componente, dentro dos () você coloca as chaves que ficarar dentro dos arquivos .json com as devidas traduções:
+
+<img src="https://i.ibb.co/X50Dhds/trad.png"/>
+
+
+Você pode criar um componente onde mudará o idioma da sua aplicação.
+
+```tsx
+// imagens contendo as bandeiras dos países
+import br from '../../assets/br.svg'
+import us from '../../assets/us.svg'
+import fr from '../../assets/fr.svg'
+//importação do Hook de tradução
+import { useTranslation } from 'react-i18next'
+
+import './styles.css'
+// Array de Objetos contendo as minhas traduções
+const languageOptions = [
+  {
+    name: 'Português',
+    value: 'ptBR',
+    flag: br
+  },
+  {
+    name: 'English',
+    value: 'en',
+    flag: us
+    },
+  {
+    name: 'Français',
+    value: 'fr',
+    flag: fr
+  },
+]
+
+export function LanguageSwitcher() {
+  const { t, i18n } = useTranslation()  
+ 
+  return (
+  <>
+    <div className='language-switcher'>
+        <span>{t('selectYourLanguage')}</span>
+        {/* Map para carregar os botões de tradução com as bandeiras */}
+        {languageOptions.map(languageOption => (
+          <button
+            key={languageOption.value}
+            onClick={() => {
+              i18n.changeLanguage(languageOption.value)
+              {/*Nesse onClick eu chamei i18n com a função changeLanguage, passando o value do idioma que eu escolher, e isso mudara o idioma de toda minha aplicação e não somente do meu componente*/}
+            }}
+          >
+            <img src={languageOption.flag} alt={languageOption.name}/>
+            <span
+            style={{
+              fontWeight: i18n.language === languageOption.value ? 'bold' : 'normal',
+              textDecoration: i18n.language === languageOption.value ? 'underline' : 'none',
+            }}
+            >{languageOption.name}</span> 
+          </button>
+        ))}
+    </div>
+  </>
+  )
+}
+
 ```
