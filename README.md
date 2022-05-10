@@ -57,7 +57,10 @@
   Criando esse projeto do zero
 </h2>
 
+  Baxei e instale esses programas 
+
 - [Visual Studio Code](https://code.visualstudio.com/download) 
+- [NodeJs](https://nodejs.org/en/download/) 
 
  Abra o terminal, e inicie o projeto ReactJs 
 
@@ -253,3 +256,31 @@ export function LanguageSwitcher() {
 }
 
 ```
+dentro dos arquivos .json você precisa chamar o *translations*.
+
+```tsx
+{
+  "translation": {
+
+}
+```
+e dentro dele precisa ser informado a chaves que você definiu dentro dos componentes com as devidas traduções
+
+``` tsx
+{
+  "translation": {
+    "selectYourLanguage": "Selecione seu idioma",
+    "title": {
+      "welcomeToTheBest": "Bem-vindo ao melhor site do mundo"
+    },
+    "subtitle": {
+      "whereYouCan":  "onde você pode encontrar o que quiser"
+    },
+    "buttons": {
+      "buttonOne": "Sobre"
+    }
+  }
+}
+```
+
+<img src="https://i.ibb.co/v4p2G0y/Screenshot-3.png"/>
