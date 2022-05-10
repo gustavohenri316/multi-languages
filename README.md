@@ -59,40 +59,40 @@
 
 - [Visual Studio Code](https://code.visualstudio.com/download) 
 
- <p> Abra o terminal, e inicie o projeto ReactJs </p>
+ Abra o terminal, e inicie o projeto ReactJs 
 
 ```bash
   $ yarn create vite meu-projeto --template react-ts
   # ou 
   $ npm create vite meu-projeto --template react-ts
 ```
- <p> Entre na pasta que acabou de criar  </p>
+ Entre na pasta que acabou de criar  
 
 ```bash
   $ cd my-projeto 
 ```
- <p> Instale as dependencias do projeto  </p>
+Instale as dependencias do projeto  
 
 ```bash
   $ yarn install 
   # ou
   $ npm install 
 ```
- <p> Abra a pasta no Visual Studio Code  </p>
+ Abra a pasta no Visual Studio Code  
 
 ```bash
   $ code .
 ```
 
- <p> Instale as bibliotecas que vamos utilizar no projeto (*utilize o terminal que instalou o projeto ou o proprio terminal do Visual Studo Code*)
-  </p>
+ Instale as bibliotecas que vamos utilizar no projeto (*utilize o terminal que instalou o projeto ou o proprio terminal do Visual Studo Code*)
+  
 
 ```bash
   $ yarn add i18next react-i18next i18next-browser-languagedetector
   # ou 
   $ npm install i18next react-i18next i18next-browser-languagedetector
 ```
- <p> Inicie o projeto  </p>
+ Inicie o projeto  
 
 ```bash
   $ npm run dev 
@@ -100,8 +100,8 @@
   $ yarn run dev
 ```
 
- <p> Cria uma pasta *i18n* dentro do *src* do deu projeto e um arquivo *index.ts* caso esteja usando TypeScript ou *index.js* e configure assim :
- </p>
+ Cria uma pasta *i18n* dentro do *src* do deu projeto e um arquivo *index.ts* caso esteja usando TypeScript ou *index.js* e configure assim :
+
 
  ```tsx
 import i18n from 'i18next'
@@ -127,15 +127,15 @@ i18n
 export default  i18n; 
 
  ```
- <p> Se a aplicação for muito grande e tiver varias traduções voce pode dentro da pasta *i18n*  criar outra pasta com o nome *translations* ou de sua preferencia, e dentro dela pode ser criado arquivos *.json* para cada idioma.
-</p> 
+ Se a aplicação for muito grande e tiver varias traduções voce pode dentro da pasta *i18n*  criar outra pasta com o nome *translations* ou de sua preferencia, e dentro dela pode ser criado arquivos *.json* para cada idioma.
+ 
 
 <img  src="https://i.ibb.co/b3txCKy/Screenshot-2.png"/>
 
 
 
- <p> E dentro do arquivo *index* da pasta *i18n* pode ser importado os arquivos *.json* com as traduções, segue o exemplo a baixo:
-  <p>
+  E dentro do arquivo *index* da pasta *i18n* pode ser importado os arquivos *.json* com as traduções, segue o exemplo a baixo:
+
 
 ```tsx
 import i18n from 'i18next'
@@ -203,7 +203,7 @@ import fr from '../../assets/fr.svg'
 import { useTranslation } from 'react-i18next'
 
 import './styles.css'
-// Array de Objetos contendo as minhas traduções
+// Array de Objetos contendo as todas traduções
 const languageOptions = [
   {
     name: 'Português',
