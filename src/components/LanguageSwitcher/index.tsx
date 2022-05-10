@@ -3,6 +3,7 @@ import us from '../../assets/us.svg'
 import fr from '../../assets/fr.svg'
 
 import { useTranslation } from 'react-i18next'
+
 import './styles.css'
 
 const languageOptions = [
@@ -24,14 +25,15 @@ const languageOptions = [
 ]
 
 export function LanguageSwitcher() {
-
-  const { t, i18n } = useTranslation()
-
+  // Enquanto na maiora das vezes você só precisa da função {t} para traduzir 
+  // seu conteúdo, você também pode obter a instância {i18n} (a fim de mudar o idioma da aplicaçãp).
+  const { t, i18n } = useTranslation()  
  
   return (
   <>
     <div className='language-switcher'>
         <span>{t('selectYourLanguage')}</span>
+        {/* Map para carregar os botões de tradução com as bandeiras */}
         {languageOptions.map(languageOption => (
           <button
             key={languageOption.value}
