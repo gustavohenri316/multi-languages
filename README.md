@@ -190,12 +190,12 @@ function App() {
 }
 export default App
 ```
-Você pode utilizar o t() para fazer as traduções do seu componente, dentro dos () você coloca as chaves que ficarar dentro dos arquivos .json com as devidas traduções:
+Pode utilizar o t() para fazer as traduções do seu componente, dentro dos *()* você coloca as chaves que ficarar dentro dos arquivos .json com as devidas traduções:
 
 <img src="https://i.ibb.co/X50Dhds/trad.png"/>
 
 
-Você pode criar um componente onde mudará o idioma da sua aplicação.
+Poderá criar um componente que mudará o idioma da sua aplicação.
 
 ```tsx
 // imagens contendo as bandeiras dos países
@@ -256,7 +256,7 @@ export function LanguageSwitcher() {
 }
 
 ```
-dentro dos arquivos .json você precisa chamar o *translations*.
+Dentro dos arquivos .json você precisa chamar o *translation*.
 
 ```tsx
 {
@@ -264,8 +264,7 @@ dentro dos arquivos .json você precisa chamar o *translations*.
 
 }
 ```
-e dentro dele precisa ser informado a chaves que você definiu dentro dos componentes com as devidas traduções
-
+Nos aqruivos .json precisa ser informado a chaves que você definiu dentro dos componentes.
 ``` tsx
 {
   "translation": {
